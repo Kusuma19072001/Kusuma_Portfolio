@@ -27,5 +27,5 @@ resume/
 
 ## 📬 Contact
 
-- [LinkedIn](https://www.linkedin.com/in/kusuma-chalasani)
+- [LinkedIn](https://www.linkedin.com/in/kusuma19072001)
 - [Instagram Art](https://www.instagram.com/pencilart_love)
