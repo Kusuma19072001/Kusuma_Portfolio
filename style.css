@@ -39,7 +39,7 @@ nav ul li a {
 
 /* Hero Section */
 .hero-background {
-  background: url("profile.jpg") center center no-repeat;
+  background: url("Profile.jpg") center center no-repeat;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
