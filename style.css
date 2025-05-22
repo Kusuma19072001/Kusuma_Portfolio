@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  background: #fffaf5;
+  color: #444;
+  scroll-behavior: smooth;
+}
+
+nav {
+  background-color: #fff;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 18px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f45b69;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Hero Section */
+.hero-background {
+  background: url("profile.jpg") center center no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#hero {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.tab-content#hero {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Overlay and Text */
+.overlay {
+  background: rgba(255, 94, 98, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: white;
+  margin: 0 20px 10px;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  color: #ffe;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: white;
+  color: #ff5e62;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #ffe5e5;
+}
+
+.email-btn {
+  background: linear-gradient(90deg, #ff7a7a, #ffb199);
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 12px 30px;
+  margin-top: 15px;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.email-btn:hover {
+  background: linear-gradient(90deg, #ff9999, #ffc1c1);
+  transform: scale(1.05);
+}
+
+/* Main content layout */
+.tab-content {
+  display: none;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 0.4s ease-in-out;
+  scroll-margin-top: 110px; /* Avoid overlap with sticky nav */
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  border-bottom: 2px solid #ffb6b6;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #c95e5e;
+}
+
+.card {
+  background: #fff0f0;
+  border-left: 5px solid #ffb6b6;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #999;
+}
+
+.hero-text .btn + .btn {
+  margin-left: 15px;
+}

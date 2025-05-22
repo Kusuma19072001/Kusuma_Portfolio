@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kusuma | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showTab('hero')">Home</a></li>
+      <li><a href="#" onclick="showTab('about')">About</a></li>
+      <li><a href="#" onclick="showTab('experience')">Experience</a></li>
+      <li><a href="#" onclick="showTab('projects')">Projects</a></li>
+      <li><a href="#" onclick="showTab('certificates')">Certificates</a></li>
+      <li><a href="#" onclick="showTab('art')">Instagram</a></li>
+      <li><a href="#" onclick="showTab('contact')">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="tab-content active" id="hero">
+  <header class="hero-background">
+    <div class="overlay">
+      <div class="hero-text">
+        <h1>Kusuma Satya Sreeja Chalasani</h1>
+        <p>Data Science Enthusiast | Cloud Engineer | AI Explorer</p>
+        <a href="resume/Resume - Kusuma Satya Sreeja Chalasani.pdf" class="btn" download>Download Resume</a>
+        <a href="https://www.linkedin.com/in/kusuma-chalasani" class="btn" target="_blank">View LinkedIn</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+
+  <div class="tab-content" id="about">
+    <h2>About Me</h2>
+    <p>I’m Kusuma Satya Sreeja Chalasani — a passionate Data Science graduate student with a strong background in cloud infrastructure, automation, and machine learning. I thrive at the intersection of structured data and creative solutions. With hands-on experience in platforms like Azure and GCP, I’ve built scalable data pipelines, automated systems with Python, and used predictive models to drive smarter decisions.</p>
+    <p>Beyond my technical work, I’m an artist at heart. Whether I’m visualizing data or sketching portraits, I find joy in creating meaningful expressions. I believe that great data science combines logic and creativity — and that’s exactly how I approach my work.</p>
+    <p>I'm currently exploring opportunities to blend my love for data, AI, and design into impactful real-world projects. Let’s build something amazing together!</p>
+  </div>
+
+  <div class="tab-content" id="experience">
+    <h2>Experience</h2>
+    <p><strong>Cloud Support Engineer – Data Operations | DHL Project</strong><br>Cloud4C | Jun 2022 – Jul 2024</p>
+    <ul>
+      <li>Led implementation of data analysis procedures and pipeline creation, improving resource optimization by 10%.</li>
+      <li>Managed Azure VMs, cloud storage, and resource monitoring for enterprise workflows.</li>
+      <li>Automated log analysis using Splunk and scripting tools (Python, PowerShell).</li>
+      <li>Prepared large datasets and supported predictive ML model deployment.</li>
+      <li>Generated actionable insights on infrastructure using storage trend analysis.</li>
+    </ul>
+    <p><strong>Data Engineer – GCP Crime Rate Prediction Project</strong><br>Academic Project | Spring 2025</p>
+    <ul>
+      <li>Designed and deployed scalable data pipelines using GCP tools: BigQuery, Hive, and PySpark on Dataproc.</li>
+      <li>Cleaned and preprocessed large crime datasets using OpenRefine and Python.</li>
+      <li>Implemented real-time streaming with Spark Structured Streaming for live data analysis.</li>
+      <li>Created time-series plots, heatmaps, and dashboards for visualizing crime trends.</li>
+    </ul>
+    <p><strong>AI Developer – DishGenie Recipe App</strong><br>Independent Project | 2025</p>
+    <ul>
+      <li>Built a full-stack AI recipe generation app using Flask, HTML/CSS, and OpenAI’s GPT API.</li>
+      <li>Developed dynamic prompts for user-controlled inputs (ingredients, cuisine, difficulty).</li>
+      <li>Integrated OpenAI API for recipe generation and deployed a responsive web interface.</li>
+      <li>Handled API error handling, UI feedback, and performance logging.</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>DishGenie – AI Recipe Generator</h3>
+      <p>Flask web app that generates creative recipes using OpenAI. GPT-powered recipe generation with a fun UI.</p>
+      <a href="https://recipe-genie-zqak.onrender.com" class="btn" target="_blank">Visit Project</a>
+</div>
+
+    <div class="card">
+      <h3>Crime Rate Prediction – GCP Project</h3>
+      <p>Built scalable pipelines using BigQuery, Hive, and Spark. Real-time crime data visualization and analysis.</p>
+    </div>
+      
+    <div class="card">
+      <h3>Emotion-Based Music Recommendation System</h3>
+      <p>Developed a CNN-powered emotion detector and integrated music recommender system using Python. Predicted emotional states from facial expressions and matched them to curated music playlists, enhancing user experience and accuracy.</p>
+  </div>
+
+    <div class="card">
+      <h3>Energy Consumption Forecasting</h3>
+      <p>Time series model to forecast household electricity usage using Python and Pandas. Reduced error by 20%.</p>
+    </div>
+  </div>
+
+<div class="tab-content" id="certificates">
+  <h2>Certificates</h2>
+  <ul>
+    <li>
+      <strong>Microsoft Certified: Azure Fundamentals (AZ-900)</strong> – Earned in February 2023.
+      <br>
+      <a href="https://learn.microsoft.com/api/credentials/share/en-us/ChKusumaSatyaSreeja-7423/787ADADBC0410834?sharingId" class="btn" target="_blank">View Certificate</a>
+    </li>
+    <br>
+    <li>
+      <strong>AI For Everyone – DeepLearning.AI</strong> – Completed in June 2021.
+      <br>
+      <a href="https://www.coursera.org/account/accomplishments/verify/33T6HK5DB9MK" class="btn" target="_blank">View Certificate</a>
+    </li>
+  </ul>
+</div>
+
+
+  <div class="tab-content" id="art">
+  <h2>Art & Instagram</h2>
+  <p>Outside of data science, I express myself through pencil art — from realistic portraits to fantasy sketches.</p>
+  <p>Explore my art gallery on Instagram:</p>
+  <a href="https://www.instagram.com/pencilart_love" class="btn" target="_blank">@pencilart_love</a>
+  </div>
+</div>
+
+<div class="tab-content" id="contact">
+  <h2>Get in Touch</h2>
+  <p>✨ Whether you're looking to collaborate on a project, chat about AI and data, or just say hi — I'm all ears!</p>
+  
+  <a href="mailto:kusumasatyasreeja@gmail.com" class="btn email-btn">📩Email Me</a>
+</div>
+
+
+  <footer>
+    <p>&copy; Kusuma Satya Sreeja Chalasani</p>
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.onload = () => showTab('hero');
+  </script>
+
+</body>
+</html>
