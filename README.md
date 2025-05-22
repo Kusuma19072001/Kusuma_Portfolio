@@ -25,7 +25,6 @@ README.md
 resume/
 ```
 
-## 📬 Contact
 
 ## 📬 Contact
 
