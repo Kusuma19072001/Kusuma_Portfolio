@@ -10,28 +10,31 @@
 
   <nav>
     <ul>
-      <li><a href="#" onclick="showTab('hero')">Home</a></li>
-      <li><a href="#" onclick="showTab('about')">About</a></li>
-      <li><a href="#" onclick="showTab('experience')">Experience</a></li>
-      <li><a href="#" onclick="showTab('projects')">Projects</a></li>
-      <li><a href="#" onclick="showTab('certificates')">Certificates</a></li>
-      <li><a href="#" onclick="showTab('art')">Instagram</a></li>
-      <li><a href="#" onclick="showTab('contact')">Contact</a></li>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#art">Creative Corner</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <div class="tab-content active" id="hero">
-  <header class="hero-background">
-    <div class="overlay">
-      <div class="hero-text">
-        <h1>Kusuma Satya Sreeja Chalasani</h1>
-        <p>Data Science Enthusiast | Cloud Engineer | AI Explorer</p>
-        <a href="resume/Resume - Kusuma Satya Sreeja Chalasani.pdf" class="btn" download>Download Resume</a>
-        <a href="https://www.linkedin.com/in/kusuma-chalasani" class="btn" target="_blank">View LinkedIn</a>
-      </div>
+<section id="hero">
+  <div class="hero-container">
+    <div class="hero-photo">
+      <img src="Profile.jpg" alt="Kusuma Satya Sreeja Photo">
     </div>
-  </header>
-</div>
+    <div class="hero-text">
+      <h1>Kusuma Satya Sreeja Chalasani</h1>
+      <p>Data Science Enthusiast | Cloud Engineer | AI Explorer</p>
+      <a href="resume/Resume - Kusuma Satya Sreeja Chalasani.pdf" class="btn" download>Resume</a>
+      <a href="https://www.linkedin.com/in/kusuma-chalasani" class="btn" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Kusuma19072001" class="btn" target="_blank">GitHub</a>
+    </div>
+  </div>
+</section>
 
 
   <div class="tab-content" id="about">
@@ -39,83 +42,207 @@
     <p>I’m Kusuma Satya Sreeja Chalasani — a passionate Data Science graduate student with a strong background in cloud infrastructure, automation, and machine learning. I thrive at the intersection of structured data and creative solutions. With hands-on experience in platforms like Azure and GCP, I’ve built scalable data pipelines, automated systems with Python, and used predictive models to drive smarter decisions.</p>
     <p>Beyond my technical work, I’m an artist at heart. Whether I’m visualizing data or sketching portraits, I find joy in creating meaningful expressions. I believe that great data science combines logic and creativity — and that’s exactly how I approach my work.</p>
     <p>I'm currently exploring opportunities to blend my love for data, AI, and design into impactful real-world projects. Let’s build something amazing together!</p>
+    <h3>Community</h3>
+    <p>I'm also an active member of the <strong>ISA Cultural Team</strong> at the University of North Texas, where I contribute to organizing campus events and creative cultural activities that promote collaboration, diversity, and engagement.</p>
   </div>
 
-  <div class="tab-content" id="experience">
-    <h2>Experience</h2>
-    <p><strong>Cloud Support Engineer – Data Operations | DHL Project</strong><br>Cloud4C | Jun 2022 – Jul 2024</p>
-    <ul>
-      <li>Led implementation of data analysis procedures and pipeline creation, improving resource optimization by 10%.</li>
-      <li>Managed Azure VMs, cloud storage, and resource monitoring for enterprise workflows.</li>
-      <li>Automated log analysis using Splunk and scripting tools (Python, PowerShell).</li>
-      <li>Prepared large datasets and supported predictive ML model deployment.</li>
-      <li>Generated actionable insights on infrastructure using storage trend analysis.</li>
-    </ul>
-    <p><strong>Data Engineer – GCP Crime Rate Prediction Project</strong><br>Academic Project | Spring 2025</p>
-    <ul>
-      <li>Designed and deployed scalable data pipelines using GCP tools: BigQuery, Hive, and PySpark on Dataproc.</li>
-      <li>Cleaned and preprocessed large crime datasets using OpenRefine and Python.</li>
-      <li>Implemented real-time streaming with Spark Structured Streaming for live data analysis.</li>
-      <li>Created time-series plots, heatmaps, and dashboards for visualizing crime trends.</li>
-    </ul>
-    <p><strong>AI Developer – DishGenie Recipe App</strong><br>Independent Project | 2025</p>
-    <ul>
-      <li>Built a full-stack AI recipe generation app using Flask, HTML/CSS, and OpenAI’s GPT API.</li>
-      <li>Developed dynamic prompts for user-controlled inputs (ingredients, cuisine, difficulty).</li>
-      <li>Integrated OpenAI API for recipe generation and deployed a responsive web interface.</li>
-      <li>Handled API error handling, UI feedback, and performance logging.</li>
-    </ul>
-  </div>
+<div class="tab-content" id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
 
-  <div class="tab-content" id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-      <h3>DishGenie – AI Recipe Generator</h3>
-      <p>Flask web app that generates creative recipes using OpenAI. GPT-powered recipe generation with a fun UI.</p>
-      <a href="https://recipe-genie-zqak.onrender.com" class="btn" target="_blank">Visit Project</a>
+    <div class="skill-card">
+      <h4>Programming & Data Analysis</h4>
+      <p>Python, SQL, Pandas, NumPy</p>
+    </div>
+
+    <div class="skill-card">
+      <h4>Data Visualization</h4>
+      <p>Matplotlib, Seaborn, Plotly, Tableau, Time Series Charts</p>
+    </div>
+
+    <div class="skill-card">
+      <h4>Machine Learning</h4>
+      <p>Regression, Classification, Clustering, Scikit-learn, CNN (Emotion Detection)</p>
+    </div>
+
+    <div class="skill-card">
+      <h4>Cloud & Automation</h4>
+      <p>Azure (VMs, Storage), GCP (BigQuery, Dataproc), Splunk, PowerShell</p>
+    </div>
+
+    <div class="skill-card">
+      <h4>Big Data & Streaming</h4>
+      <p>PySpark, Hive, Spark Structured Streaming, OpenRefine, ETL Pipelines</p>
+    </div>
+
+    <div class="skill-card">
+      <h4>Web Development</h4>
+      <p>Flask, HTML5, CSS3, JavaScript, Responsive Design, API Integration</p>
+    </div>
+
+    <div class="skill-card">
+      <h4>AI Integration</h4>
+      <p>OpenAI GPT API, Prompt Engineering (DishGenie Project)</p>
+    </div>
+
+    <div class="skill-card">
+      <h4>Tools & Platforms</h4>
+      <p>Jupyter Notebook, Google Colab, VS Code, GitHub, Render, Google Sheets, Excel</p>
+    </div>
+
+  </div>
 </div>
 
-    <div class="card">
-      <h3>Crime Rate Prediction – GCP Project</h3>
-      <p>Built scalable pipelines using BigQuery, Hive, and Spark. Real-time crime data visualization and analysis.</p>
+
+<div class="tab-content" id="experience">
+  <h2>Experience</h2>
+
+  <!-- Professional Experience -->
+  <div class="experience-section">
+    <h3 class="experience-heading">Professional Experience</h3>
+
+    <div class="experience-card">
+      <h4>Cloud Support Engineer – Data Operations</h4>
+      <p class="org">DHL Project, Cloud4C <span>| Jun 2022 – Jul 2024</span></p>
+      <ul>
+        <li>Implemented data pipelines and analysis procedures, improving resource usage by 10%.</li>
+        <li>Managed Azure VMs, cloud storage, and workflow monitoring.</li>
+        <li>Automated log analytics with Splunk and PowerShell.</li>
+        <li>Prepared datasets and deployed ML models for predictive analytics.</li>
+        <li>Generated insights from infrastructure using storage trends.</li>
+      </ul>
     </div>
-      
-    <div class="card">
-      <h3>Emotion-Based Music Recommendation System</h3>
-      <p>Developed a CNN-powered emotion detector and integrated music recommender system using Python. Predicted emotional states from facial expressions and matched them to curated music playlists, enhancing user experience and accuracy.</p>
   </div>
 
-    <div class="card">
-      <h3>Energy Consumption Forecasting</h3>
-      <p>Time series model to forecast household electricity usage using Python and Pandas. Reduced error by 20%.</p>
+  <!-- Academic & Project Experience -->
+  <div class="experience-section">
+    <h3 class="experience-heading">Academic & Project Experience</h3>
+
+    <div class="experience-card">
+      <h4>Data Engineer – Crime Rate Prediction</h4>
+      <p class="org">Academic Project <span>| Spring 2025</span></p>
+      <ul>
+        <li>Built pipelines with GCP: BigQuery, Hive, and PySpark on Dataproc.</li>
+        <li>Cleaned large datasets using OpenRefine and Python.</li>
+        <li>Enabled real-time data analysis via Spark Structured Streaming.</li>
+        <li>Created crime trend dashboards using heatmaps and time-series plots.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h4>AI Developer – DishGenie Recipe App</h4>
+      <p class="org">Group Project <span>| 2025</span></p>
+      <ul>
+        <li>Built a full-stack recipe generator using Flask, HTML/CSS, and GPT API.</li>
+        <li>Enabled user input control for cuisine, ingredients, and difficulty.</li>
+        <li>Integrated OpenAI API and deployed responsive UI via Render.</li>
+        <li>Managed UI feedback, error handling, and API performance logging.</li>
+      </ul>
     </div>
   </div>
+</div>
+
+
+  <div class="tab-content" id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <div class="project-header">
+      <img src="Dishgenie1.jpg" alt="Dishgenie Logo" class="project-icon">
+      <h3>DishGenie – AI Recipe Generator</h3>
+   </div>
+   <p>
+    A Flask-based web app that generates creative recipes using OpenAI’s GPT model. Users can input ingredients and cuisine preferences to receive personalized recipe ideas.
+  </p>
+  <ul>
+    <li>Developed a full-stack web application with Flask, HTML, and CSS.</li>
+    <li>Integrated OpenAI’s GPT API to generate recipe content based on user input.</li>
+    <li>Designed a user-friendly interface for real-time interaction and feedback.</li>
+    <li>Deployed the app using Render for public access.</li>
+  </ul>
+  <a href="https://recipe-genie-zqak.onrender.com" class="btn" target="_blank">Visit Project</a>
+</div>
+
+
+  <div class="card">
+    <h3>Crime Rate Prediction – GCP Project</h3>
+    <p>
+      A cloud-native pipeline built to analyze and visualize crime trends using scalable tools on Google Cloud Platform.
+    </p>
+    <ul>
+      <li>Used BigQuery for SQL-based analysis and data warehousing.</li>
+      <li>Performed ETL and transformations with Hive and PySpark on Dataproc.</li>
+      <li>Cleaned raw datasets using Python and OpenRefine.</li>
+      <li>Implemented Spark Structured Streaming for live data handling and dashboard creation.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Emotion-Based Music Recommendation System</h3>
+    <p>
+      A smart system that detects a user’s emotion using facial expressions and recommends music based on their mood.
+    </p>
+    <ul>
+      <li>Used CNN to classify emotions from facial images captured via webcam.</li>
+      <li>Mapped detected emotions to relevant music playlists using Spotify’s API.</li>
+      <li>Built a Python-based interface for real-time emotion recognition and response.</li>
+      <li>Improved UX with seamless transitions between mood detection and music output.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Energy Consumption Forecasting</h3>
+    <p>
+      A predictive analytics project focused on forecasting household electricity usage using time-series models.
+    </p>
+    <ul>
+      <li>Utilized historical consumption datasets for training models in Python.</li>
+      <li>Applied statistical and machine learning techniques like ARIMA and LSTM.</li>
+      <li>Visualized trends using Matplotlib and Seaborn.</li>
+      <li>Reduced prediction error by 20% through hyperparameter tuning and normalization.</li>
+    </ul>
+  </div>
+</div>
 
 <div class="tab-content" id="certificates">
   <h2>Certificates</h2>
   <ul>
     <li>
       <strong>Microsoft Certified: Azure Fundamentals (AZ-900)</strong> – Earned in February 2023.
-      <br>
+      <p>
+        Gained foundational understanding of Azure services, core cloud concepts, pricing models,
+        governance, and compliance in cloud environments.
+      </p>
       <a href="https://learn.microsoft.com/api/credentials/share/en-us/ChKusumaSatyaSreeja-7423/787ADADBC0410834?sharingId" class="btn" target="_blank">View Certificate</a>
     </li>
     <br>
     <li>
       <strong>AI For Everyone – DeepLearning.AI</strong> – Completed in June 2021.
-      <br>
+      <p>
+        Learned AI strategy, key use cases, limitations of AI, workflow basics, and how to navigate
+        AI adoption in business environments responsibly.
+      </p>
       <a href="https://www.coursera.org/account/accomplishments/verify/33T6HK5DB9MK" class="btn" target="_blank">View Certificate</a>
     </li>
   </ul>
 </div>
 
 
-  <div class="tab-content" id="art">
-  <h2>Art & Instagram</h2>
-  <p>Outside of data science, I express myself through pencil art — from realistic portraits to fantasy sketches.</p>
-  <p>Explore my art gallery on Instagram:</p>
-  <a href="https://www.instagram.com/pencilart_love" class="btn" target="_blank">@pencilart_love</a>
+<div class="tab-content" id="art">
+  <h2>My Creative Space</h2>
+  <p>Outside of my professional work in data science and cloud engineering, I pursue pencil sketching and digital illustration as a personal hobby.</p>
+  <p>This gallery features a few of my favorite works — blending emotion, culture, and character through art.</p>
+
+  <div class="art-gallery">
+    <img src="art3.jpg" alt="Pencil Sketch of Actor" class="art-image">
+    <img src="art2.png" alt="Lion King Fanart" class="art-image">
+    <img src="art1.png" alt="Little Krishna" class="art-image">
   </div>
+
+  <p>Explore more of my work on Instagram:</p>
+  <a href="https://www.instagram.com/pencilart_love" class="btn" target="_blank">@pencilart_love</a>
 </div>
+
 
 <div class="tab-content" id="contact">
   <h2>Get in Touch</h2>
@@ -124,20 +251,10 @@
   <a href="mailto:kusumasatyasreeja@gmail.com" class="btn email-btn">📩Email Me</a>
 </div>
 
-
   <footer>
     <p>&copy; Kusuma Satya Sreeja Chalasani</p>
   </footer>
 
-  <script>
-    function showTab(tabId) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    window.onload = () => showTab('hero');
-  </script>
 
 </body>
 </html>
