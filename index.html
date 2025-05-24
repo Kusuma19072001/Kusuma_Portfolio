@@ -10,30 +10,31 @@
 
   <nav>
     <ul>
-      <li><a href="#" onclick="showTab('hero')">Home</a></li>
-      <li><a href="#" onclick="showTab('about')">About</a></li>
-      <li><a href="#" onclick="showTab('skills')">Skills</a></li>
-      <li><a href="#" onclick="showTab('experience')">Experience</a></li>
-      <li><a href="#" onclick="showTab('projects')">Projects</a></li>
-      <li><a href="#" onclick="showTab('certificates')">Certificates</a></li>
-      <li><a href="#" onclick="showTab('art')">Creative Corner</a></li>
-      <li><a href="#" onclick="showTab('contact')">Contact</a></li>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#art">Creative Corner</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <div class="tab-content active" id="hero">
-  <header class="hero-background">
-    <div class="overlay">
-      <div class="hero-text">
-        <h1>Kusuma Satya Sreeja Chalasani</h1>
-        <p>Data Science Enthusiast | Cloud Engineer | AI Explorer</p>
-        <a href="resume/Resume - Kusuma Satya Sreeja Chalasani.pdf" class="btn" download>Resume</a>
-        <a href="https://www.linkedin.com/in/kusuma-chalasani" class="btn" target="_blank">LinkedIn</a>
-        <a href="https://github.com/Kusuma19072001" class="btn" target="_blank">GitHub</a>
-      </div>
+<section id="hero">
+  <div class="hero-container">
+    <div class="hero-photo">
+      <img src="Profile.jpg" alt="Kusuma Satya Sreeja Photo">
     </div>
-  </header>
-</div>
+    <div class="hero-text">
+      <h1>Kusuma Satya Sreeja Chalasani</h1>
+      <p>Data Science Enthusiast | Cloud Engineer | AI Explorer</p>
+      <a href="resume/Resume - Kusuma Satya Sreeja Chalasani.pdf" class="btn" download>Resume</a>
+      <a href="https://www.linkedin.com/in/kusuma-chalasani" class="btn" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Kusuma19072001" class="btn" target="_blank">GitHub</a>
+    </div>
+  </div>
+</section>
 
 
   <div class="tab-content" id="about">
@@ -254,15 +255,6 @@
     <p>&copy; Kusuma Satya Sreeja Chalasani</p>
   </footer>
 
-  <script>
-    function showTab(tabId) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    window.onload = () => showTab('hero');
-  </script>
 
 </body>
 </html>
