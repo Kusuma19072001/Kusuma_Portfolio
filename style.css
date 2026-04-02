@@ -282,21 +282,6 @@ body.site-premium::after {
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-.email-btn {
-  margin-top: 8px;
-  padding: 14px 32px;
-  font-size: 1rem;
-  background: linear-gradient(135deg, #e11d48, #fb7185);
-  color: #fff;
-  border: none;
-  box-shadow: 0 8px 32px rgba(225, 29, 72, 0.35);
-}
-
-.email-btn:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(225, 29, 72, 0.45);
-}
-
 /* Full-width sections (Tailwind-style: min-h-screen, centered inner max-w-7xl) */
 .section-block {
   position: relative;
@@ -350,9 +335,50 @@ body.site-premium::after {
   background: linear-gradient(180deg, transparent 0%, rgba(45, 212, 191, 0.06) 50%, transparent 100%);
 }
 
+.section-block--contact .section-inner > h2 {
+  justify-content: center;
+  text-align: center;
+}
+
 .section-block--contact .contact-lead {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.section-block--contact .contact-meta {
+  margin: 0 auto 1.35rem;
+  max-width: 40rem;
+}
+
+.section-block--contact .contact-meta-line {
+  margin: 0 0 0.4rem;
+  max-width: none;
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.section-block--contact .contact-meta-line:last-child {
+  margin-bottom: 0;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 0.25rem;
+}
+
+.section-inner .contact-response-note {
+  margin: 1.05rem auto 0;
+  max-width: 40rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
 }
 
 .section-inner {
@@ -1243,24 +1269,35 @@ button.project-details-link {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* Skills — responsive grid + equal height */
+/* Skills — grid + cards aligned with Experience & Certifications (teal accent, glass) */
+.skills-section-intro {
+  margin: 0 0 1.5rem;
+  color: var(--text-secondary);
+  max-width: 70ch;
+}
+
+.skills-section-intro a {
+  font-weight: 500;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1.25rem;
   margin-top: 0;
 }
 
 @media (min-width: 640px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .skills-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 }
 
@@ -1268,42 +1305,84 @@ button.project-details-link {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(15, 23, 42, 0.45));
+  gap: 0.65rem;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.06), rgba(15, 23, 42, 0.5));
   padding: 1.5rem;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 3px solid var(--accent-rose);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid rgba(45, 212, 191, 0.38);
   box-shadow: var(--shadow-sm);
-  transition: transform 0.3s var(--ease-out), border-color 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform 0.3s var(--ease-out), border-color 0.3s, box-shadow 0.3s, border-left-color 0.3s;
 }
 
 .skill-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-3px);
   border-left-color: var(--accent-teal);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-md), 0 0 32px rgba(45, 212, 191, 0.09);
 }
 
 .skill-card h4 {
   font-family: var(--font-display);
   color: var(--text-primary);
-  margin: 0 0 10px;
-  font-size: 1.05rem;
+  margin: 0;
+  font-size: 1.08rem;
   font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
 }
 
-.skill-card p {
+.skill-card-body {
   margin: 0;
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  flex: 1;
+}
+
+/* One scannable line; links inherit .section-inner a treatment */
+.skill-card-used {
+  margin: 0;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.8125rem;
   line-height: 1.55;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.25rem;
+}
+
+.skill-used-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-right: 0.15rem;
+}
+
+.skill-used-sep {
+  color: var(--text-muted);
+  opacity: 0.85;
+}
+
+.skill-card-used a {
+  font-weight: 500;
+}
+
+.skill-card-used a:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 /* Experience */
 .experience-section {
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .experience-section + .experience-section {
@@ -1312,13 +1391,14 @@ button.project-details-link {
 
 .experience-heading {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1.22rem;
   font-weight: 600;
   color: var(--text-primary);
   margin-top: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.1rem;
   padding-left: 14px;
-  border-left: 3px solid var(--accent-teal);
+  border-left: 3px solid rgba(45, 212, 191, 0.72);
+  letter-spacing: 0.01em;
 }
 
 .experience-stack {
@@ -1328,11 +1408,11 @@ button.project-details-link {
 }
 
 .experience-card {
-  background: linear-gradient(155deg, rgba(255, 255, 255, 0.05), rgba(15, 23, 42, 0.35));
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.06), rgba(15, 23, 42, 0.5));
   padding: 1.5rem;
   border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 4px solid rgba(251, 113, 133, 0.35);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid rgba(45, 212, 191, 0.38);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: var(--shadow-sm);
@@ -1342,8 +1422,8 @@ button.project-details-link {
 
 .experience-card:hover {
   transform: translateY(-3px);
-  border-left-color: var(--accent-rose);
-  box-shadow: var(--shadow-md);
+  border-left-color: var(--accent-teal);
+  box-shadow: var(--shadow-md), 0 0 32px rgba(45, 212, 191, 0.09);
 }
 
 .experience-card h4 {
@@ -1356,7 +1436,7 @@ button.project-details-link {
 .experience-card .org {
   font-weight: 600;
   color: var(--text-secondary);
-  margin-bottom: 12px;
+  margin-bottom: 0.9rem;
   font-size: 0.95rem;
 }
 
@@ -1367,18 +1447,34 @@ button.project-details-link {
 }
 
 .experience-card ul {
-  padding-left: 1.15rem;
+  padding-left: 1.1rem;
   margin: 0;
 }
 
 .experience-card li {
-  margin-bottom: 8px;
-  line-height: 1.7;
+  margin-bottom: 0.45rem;
+  line-height: 1.65;
   color: var(--text-secondary);
 }
 
 .experience-card li::marker {
-  color: var(--accent-rose);
+  color: rgba(45, 212, 191, 0.88);
+}
+
+.experience-card--empty {
+  border-left-color: rgba(45, 212, 191, 0.5);
+  background: linear-gradient(150deg, rgba(45, 212, 191, 0.1), rgba(15, 23, 42, 0.42));
+}
+
+.experience-card--empty:hover {
+  border-left-color: var(--accent-teal);
+  box-shadow: var(--shadow-md), 0 0 24px rgba(45, 212, 191, 0.1);
+}
+
+.experience-empty-text {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 
 /* Certifications */
