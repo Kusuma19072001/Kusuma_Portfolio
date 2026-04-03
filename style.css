@@ -685,7 +685,8 @@ body.site-premium::after {
 .project-card-minimal .project-icon,
 .project-card-minimal .project-icon.project-icon--luma-featured,
 .project-card-minimal .project-icon.project-icon--rag-preview,
-.project-card-minimal .project-icon.project-icon--job-matcher-preview {
+.project-card-minimal .project-icon.project-icon--job-matcher-preview,
+.project-card-minimal .project-icon.project-icon--ai-analyst-preview {
   width: 10rem;
   height: 6rem;
   max-width: none;
@@ -1038,6 +1039,14 @@ body.site-premium::after {
   object-position: top center;
 }
 
+.project-icon.project-icon--ai-analyst-preview {
+  width: 220px;
+  max-width: min(100%, 280px);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top center;
+}
+
 .project-highlight-job-matcher {
   background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1));
   border: 1px solid rgba(96, 165, 250, 0.2);
@@ -1327,16 +1336,20 @@ button.project-details-link {
   font-size: 1.1rem;
 }
 
-.icon-list {
-  list-style: none;
-  padding-left: 0;
+.project-modal .modal-section ul {
+  list-style: disc;
+  padding-left: 1.35rem;
+  margin: 0;
 }
 
-.icon-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+.project-modal .modal-section ul li {
+  display: list-item;
   margin-bottom: 10px;
+  padding-left: 0.35rem;
+}
+
+.project-modal .modal-section ul li::marker {
+  color: var(--accent-teal);
 }
 
 .screenshot-grid {
@@ -2119,7 +2132,8 @@ section#certificates.section-block {
   .project-card-minimal .project-icon,
   .project-card-minimal .project-icon.project-icon--luma-featured,
   .project-card-minimal .project-icon.project-icon--rag-preview,
-  .project-card-minimal .project-icon.project-icon--job-matcher-preview {
+  .project-card-minimal .project-icon.project-icon--job-matcher-preview,
+  .project-card-minimal .project-icon.project-icon--ai-analyst-preview {
     width: 100%;
     max-width: 12rem;
     height: auto;
@@ -2483,8 +2497,12 @@ html[data-theme="light"] .project-modal--ai-analyst {
 html[data-theme="light"] .project-modal,
 html[data-theme="light"] .project-modal .modal-section-lead,
 html[data-theme="light"] .project-modal .project-feature-list,
-html[data-theme="light"] .project-modal .icon-list {
+html[data-theme="light"] .project-modal .modal-section ul {
   color: var(--text-secondary);
+}
+
+html[data-theme="light"] .project-modal .modal-section ul li::marker {
+  color: var(--accent-teal-deep);
 }
 
 html[data-theme="light"] .project-modal h3,

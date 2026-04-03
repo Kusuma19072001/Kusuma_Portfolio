@@ -18,10 +18,18 @@ This is my personal portfolio site built using **HTML, CSS, and JavaScript**, an
 ## 📁 Project Structure
 
 ```
-index.html  
-style.css  
-Profile.jpg  
-README.md  
+index.html
+style.css
+README.md
+images/
+  Profile.jpeg
+  unt.png
+  Dishgenie1.jpg
+  art/
+  certs/
+  luma/
+  rag/
+  …
 resume/
 ```
 
