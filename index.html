@@ -1,275 +1,1105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kusuma | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("kusuma-theme");
+        if (stored === "light" || stored === "dark") {
+          document.documentElement.setAttribute("data-theme", stored);
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
-<body>
+<body class="site-premium">
 
-  <nav>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#art">Creative Corner</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="site-nav__bar">
+      <div class="theme-toggle" role="group" aria-label="Color theme">
+        <button type="button" class="theme-toggle__btn" data-theme-value="light" aria-pressed="false">Light</button>
+        <button type="button" class="theme-toggle__btn" data-theme-value="dark" aria-pressed="true">Night</button>
+      </div>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certifications</a></li>
+        <li><a href="#art">Creative Corner</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-<section id="hero">
+<section id="hero" class="hero section-block section-block--hero section-reveal" aria-labelledby="hero-heading">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="section-inner">
   <div class="hero-container">
     <div class="hero-photo">
-      <img src="Profile.jpg" alt="Kusuma Satya Sreeja Photo">
+      <div class="hero-photo-frame">
+        <img src="images/Profile.jpeg" alt="Kusuma Satya Sreeja Photo">
+      </div>
     </div>
     <div class="hero-text">
-      <h1>Kusuma Satya Sreeja Chalasani</h1>
-      <p>Data Science Enthusiast | Cloud Engineer | AI Explorer</p>
-      <a href="resume/Resume - Kusuma Satya Sreeja Chalasani.pdf" class="btn" download>Resume</a>
-      <a href="https://www.linkedin.com/in/kusuma-chalasani" class="btn" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Kusuma19072001" class="btn" target="_blank">GitHub</a>
+      <p class="hero-eyebrow">Portfolio · Data &amp; AI</p>
+      <h1 id="hero-heading">Kusuma Satya Sreeja Chalasani</h1>
+      <p class="hero-tagline">Data Engineer · AI Systems Builder · Cloud (Azure &amp; GCP)</p>
+      <div class="hero-actions">
+        <a href="resume/Kusuma_Chalasani.pdf" class="btn btn-primary" download>Resume</a>
+        <a href="https://www.linkedin.com/in/kusuma-chalasani" class="btn btn-outline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Kusuma19072001" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
+  </div>
   </div>
 </section>
 
 
-  <div class="tab-content" id="about">
-    <h2>About Me</h2>
+  <section class="section-block section-reveal" id="about" aria-labelledby="about-heading">
+    <div class="section-inner">
+    <h2 id="about-heading"><span class="section-label">01</span> About Me</h2>
     <p>I’m Kusuma Satya Sreeja Chalasani — a passionate Data Science graduate student with a strong background in cloud infrastructure, automation, and machine learning. I thrive at the intersection of structured data and creative solutions. With hands-on experience in platforms like Azure and GCP, I’ve built scalable data pipelines, automated systems with Python, and used predictive models to drive smarter decisions.</p>
     <p>Beyond my technical work, I’m an artist at heart. Whether I’m visualizing data or sketching portraits, I find joy in creating meaningful expressions. I believe that great data science combines logic and creativity — and that’s exactly how I approach my work.</p>
     <p>I'm currently exploring opportunities to blend my love for data, AI, and design into impactful real-world projects. Let’s build something amazing together!</p>
-    <h3>Community</h3>
+    <h3 class="subsection-title">Community</h3>
     <p>I'm also an active member of the <strong>ISA Cultural Team</strong> at the University of North Texas, where I contribute to organizing campus events and creative cultural activities that promote collaboration, diversity, and engagement.</p>
-  </div>
+    </div>
+  </section>
 
-<div class="tab-content" id="skills">
-  <h2>Skills</h2>
+<section class="section-block section-reveal" id="education" aria-labelledby="education-heading">
+  <div class="section-inner">
+    <h2 id="education-heading"><span class="section-label">02</span> Education</h2>
+    <article class="card education-card" aria-label="Graduate education at UNT">
+      <div class="education-card__top">
+        <div class="education-card__logo-wrap">
+          <img src="images/unt.png" alt="" class="education-card__logo" width="48" height="48" loading="lazy" decoding="async" />
+        </div>
+        <div class="education-card__identity">
+          <p class="education-card__degree">Master of Science in Data Science</p>
+          <div class="education-card__meta">
+            <span class="education-card__meta-item">
+              <svg class="education-card__svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+              </svg>
+              <span>University of North Texas (UNT)</span>
+            </span>
+            <span class="education-card__meta-item">
+              <svg class="education-card__svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5" />
+              </svg>
+              <span>2024 – Present</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <ul class="education-card__details">
+        <li><strong class="education-card__bullet-label">Relevant Coursework:</strong> Machine Learning, Big Data, Data Engineering, Artificial Intelligence</li>
+        <li><strong class="education-card__bullet-label">Focus Areas:</strong> AI Agents, Data Pipelines, Cloud Computing</li>
+        <li>Currently building projects in AI-driven automation, anomaly detection, and intelligent systems</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section-block section-reveal" id="skills" aria-labelledby="skills-heading">
+  <div class="section-inner">
+  <h2 id="skills-heading"><span class="section-label">03</span> Skills</h2>
+  <p class="skills-section-intro">
+    Core stacks at a glance—full write-ups live under <a href="#projects">Projects</a> and <a href="#certificates">Certifications</a>.
+  </p>
   <div class="skills-grid">
 
     <div class="skill-card">
-      <h4>Programming & Data Analysis</h4>
-      <p>Python, SQL, Pandas, NumPy</p>
+      <h4>Programming &amp; Data Analysis</h4>
+      <p class="skill-card-body">Python, SQL, Pandas, NumPy, OpenRefine, EDA &amp; feature prep.</p>
+      <p class="skill-card-used">
+        <span class="skill-used-label">Used in:</span>
+        <a href="#project-interview-prep-rag">Interview Prep RAG</a><span class="skill-used-sep">,</span>
+        <a href="#project-ai-data-analyst">AI Data Analyst</a><span class="skill-used-sep">,</span>
+        <a href="#project-crime-prediction">Crime Rate Prediction</a>
+      </p>
     </div>
 
     <div class="skill-card">
       <h4>Data Visualization</h4>
-      <p>Matplotlib, Seaborn, Plotly, Tableau, Time Series Charts</p>
+      <p class="skill-card-body">Matplotlib, Seaborn, Plotly, Recharts, Tableau, dashboards &amp; time series.</p>
+      <p class="skill-card-used">
+        <span class="skill-used-label">Used in:</span>
+        <a href="#luma-featured">LUMA 2.0</a><span class="skill-used-sep">,</span>
+        <a href="#project-ai-data-analyst">AI Data Analyst</a>
+      </p>
     </div>
 
     <div class="skill-card">
-      <h4>Machine Learning</h4>
-      <p>Regression, Classification, Clustering, Scikit-learn, CNN (Emotion Detection)</p>
+      <h4>Machine Learning &amp; Forecasting</h4>
+      <p class="skill-card-body">Scikit-learn, CNNs, OpenCV, SBERT &amp; embeddings, classification &amp; clustering, ARIMA &amp; LSTM.</p>
+      <p class="skill-card-used">
+        <span class="skill-used-label">Used in:</span>
+        <a href="#smart-job-matcher-card">Smart Job Matcher</a><span class="skill-used-sep">,</span>
+        <a href="#project-emotion-music">Emotion-Based Music</a><span class="skill-used-sep">,</span>
+        <a href="#project-energy-forecasting">Energy Forecasting</a>
+      </p>
     </div>
 
     <div class="skill-card">
-      <h4>Cloud & Automation</h4>
-      <p>Azure (VMs, Storage), GCP (BigQuery, Dataproc), Splunk, PowerShell</p>
+      <h4>Generative AI, RAG &amp; Agents</h4>
+      <p class="skill-card-body">LangChain, LangGraph, ChromaDB, Groq &amp; Gemini, OpenAI GPT, Streamlit, prompts &amp; context design.</p>
+      <p class="skill-card-used">
+        <span class="skill-used-label">Used in:</span>
+        <a href="#project-interview-prep-rag">Interview Prep RAG</a><span class="skill-used-sep">,</span>
+        <a href="#luma-featured">LUMA 2.0</a><span class="skill-used-sep">,</span>
+        <a href="#project-dishgenie">DishGenie</a>
+      </p>
     </div>
 
     <div class="skill-card">
-      <h4>Big Data & Streaming</h4>
-      <p>PySpark, Hive, Spark Structured Streaming, OpenRefine, ETL Pipelines</p>
+      <h4>Cloud &amp; Automation</h4>
+      <p class="skill-card-body">Azure VMs &amp; storage, GCP BigQuery &amp; Dataproc, Splunk, PowerShell automation.</p>
+      <p class="skill-card-used">
+        <span class="skill-used-label">Used in:</span>
+        <a href="#project-crime-prediction">Crime Rate Prediction</a><span class="skill-used-sep">,</span>
+        <a href="#project-dishgenie">DishGenie</a>
+      </p>
     </div>
 
     <div class="skill-card">
-      <h4>Web Development</h4>
-      <p>Flask, HTML5, CSS3, JavaScript, Responsive Design, API Integration</p>
+      <h4>Big Data &amp; Streaming</h4>
+      <p class="skill-card-body">PySpark, Hive, Spark Structured Streaming, ETL at scale.</p>
+      <p class="skill-card-used">
+        <span class="skill-used-label">Used in:</span>
+        <a href="#project-crime-prediction">Crime Rate Prediction</a>
+      </p>
     </div>
 
     <div class="skill-card">
-      <h4>AI Integration</h4>
-      <p>OpenAI GPT API, Prompt Engineering (DishGenie Project)</p>
+      <h4>Modern Web &amp; APIs</h4>
+      <p class="skill-card-body">React, TypeScript, Tailwind CSS, Framer Motion, Flask, FastAPI, REST, HTML/CSS, JavaScript, responsive UI.</p>
+      <p class="skill-card-used">
+        <span class="skill-used-label">Used in:</span>
+        <a href="#luma-featured">LUMA 2.0</a><span class="skill-used-sep">,</span>
+        <a href="#smart-job-matcher-card">Smart Job Matcher</a><span class="skill-used-sep">,</span>
+        <a href="#project-ai-data-analyst">AI Data Analyst</a>
+      </p>
     </div>
 
     <div class="skill-card">
-      <h4>Tools & Platforms</h4>
-      <p>Jupyter Notebook, Google Colab, VS Code, GitHub, Render, Google Sheets, Excel</p>
+      <h4>Tools &amp; Delivery</h4>
+      <p class="skill-card-body">Jupyter, Colab, VS Code, GitHub, Render, PostgreSQL, Excel, Google Sheets.</p>
+      <p class="skill-card-used">
+        <span class="skill-used-label">Used in:</span>
+        <a href="#luma-featured">LUMA 2.0</a><span class="skill-used-sep">,</span>
+        <a href="#project-interview-prep-rag">Interview Prep RAG</a><span class="skill-used-sep">,</span>
+        <a href="#project-dishgenie">DishGenie</a>
+      </p>
     </div>
 
   </div>
-</div>
+  </div>
+</section>
 
 
-<div class="tab-content" id="experience">
-  <h2>Experience</h2>
+<section class="section-block section-reveal" id="experience" aria-labelledby="experience-heading">
+  <div class="section-inner">
+  <h2 id="experience-heading"><span class="section-label">04</span> Experience</h2>
 
   <!-- Professional Experience -->
   <div class="experience-section">
     <h3 class="experience-heading">Professional Experience</h3>
 
+    <div class="experience-stack">
     <div class="experience-card">
-      <h4>Cloud Support Engineer – Data Operations</h4>
+      <h4>Cloud Support Engineer - Data Engineering &amp; Operations</h4>
       <p class="org">DHL Project, Cloud4C <span>| Jun 2022 – Jul 2024</span></p>
       <ul>
-        <li>Implemented data pipelines and analysis procedures, improving resource usage by 10%.</li>
-        <li>Managed Azure VMs, cloud storage, and workflow monitoring.</li>
-        <li>Automated log analytics with Splunk and PowerShell.</li>
-        <li>Prepared datasets and deployed ML models for predictive analytics.</li>
-        <li>Generated insights from infrastructure using storage trends.</li>
+        <li>Worked on enterprise cloud operations and data-driven systems for large-scale environments (DHL project), contributing across data engineering, analytics, and cloud infrastructure workflows.</li>
+        <li>Designed and supported data pipelines for extracting, transforming, and analyzing cloud usage and performance data using Python and SQL.</li>
+        <li>Processed and managed large-scale operational datasets, enabling analytics, reporting, and optimization initiatives.</li>
+        <li>Automated data extraction, transformation, and reporting workflows using Python and PowerShell, improving efficiency and reliability.</li>
+        <li>Performed trend analysis on cloud storage, logs, and performance metrics to support infrastructure planning and decision-making.</li>
+        <li>Worked with cloud platforms (Azure &amp; GCP) to manage data workflows, storage systems, and processing pipelines.</li>
+        <li>Supported AI/analytics use cases by preparing clean, structured datasets for downstream modeling and insights.</li>
+        <li>Collaborated with cross-functional teams to ensure data availability, consistency, and system reliability across cloud environments.</li>
+        <li>Contributed to monitoring, troubleshooting, and optimization of cloud-hosted systems and data pipelines.</li>
       </ul>
     </div>
-  </div>
-<div class="experience-card">
-  <div class="project-header">
-    <img src="unt.png" alt="UNT Logo" class="project-icon">
-    <h4>Student Assistant – Technical Support</h4>
-  </div>
-  <p class="org">UNT College of Merchandising, Hospitality & Tourism <span>| Jul 2024 – Present</span></p>
-  <ul>
-    <li>Provided tech support for faculty/students by resolving software, hardware, and network issues.</li>
-    <li>Managed 240+ student loaner laptops, including imaging, software installation, and security updates.</li>
-    <li>Assisted with IT desk operations—answering queries and guiding students through the borrowing process.</li>
-    <li>Maintained organized workspace and ensured timely updates for system integrity and performance.</li>
-    <li>Supported faculty IT needs and promoted secure computing practices.</li>
-  </ul>
-</div>
+    <div class="experience-card">
+      <div class="project-header">
+        <img src="images/unt.png" alt="UNT Logo" class="project-icon">
+        <h4>Student Assistant - IT / Departmental Operations (Cross-Functional IT Support)</h4>
+      </div>
+      <p class="org">University of North Texas - College of Merchandising, Hospitality & Tourism <span>| Dec 2024 - Present</span></p>
+      <ul>
+        <li>Provided cross-functional IT support to CMHT faculty, staff, and students for hardware, software, and system-related issues.</li>
+        <li>Troubleshot Windows OS, application, peripheral, network access, and user account problems.</li>
+        <li>Managed and supported 240+ student loaner laptops to keep devices secure, functional, and up to date.</li>
+        <li>Re-imaged, configured, and deployed end-user devices with required software and system configurations.</li>
+        <li>Assisted with patch management and update cycles to maintain stability and security compliance.</li>
+        <li>Supported front desk and checkout operations by handling technical inquiries and issue documentation.</li>
+        <li>Collaborated with IT teams and department staff to minimize downtime and improve day-to-day operations.</li>
+      </ul>
+    </div>
 
+    <div class="experience-card">
+      <h4>Dining Services Associate</h4>
+      <p class="org">University of North Texas <span>| Oct 2024 - Nov 2024</span></p>
+      <ul>
+        <li>Delivered excellent customer service and supported daily operations in a fast-paced dining environment.</li>
+        <li>Maintained strong attention to detail and time management while balancing academic commitments.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
 
   <!-- Academic & Project Experience -->
   <div class="experience-section">
     <h3 class="experience-heading">Academic & Project Experience</h3>
 
-    <div class="experience-card">
-      <h4>Data Engineer – Crime Rate Prediction</h4>
-      <p class="org">Academic Project <span>| Spring 2025</span></p>
+    <div class="experience-stack">
+      <div class="experience-card experience-card--empty" aria-live="polite">
+        <h4>Academic & Project Entries</h4>
+        <p class="org">To be updated soon</p>
+        <p class="experience-empty-text">This section is intentionally kept blank for now.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+  <section class="section-block section-block--projects section-reveal" id="projects" aria-labelledby="projects-heading">
+  <div class="section-inner">
+  <h2 id="projects-heading"><span class="section-label">05</span> Projects</h2>
+
+  <div class="featured-project-card card reveal project-card-minimal project-scroll-target" id="luma-featured">
+    <span class="featured-pill">TOP FEATURED PROJECT</span>
+    <div class="project-card-body">
+      <div class="project-header project-header--minimal">
+        <img class="project-icon project-icon--luma-featured" src="images/luma/luma-home.png" width="640" height="400" alt="LUMA wellness app home dashboard with quick access cards and BreatheSync highlight" loading="lazy" decoding="async" />
+        <div>
+          <h3>LUMA 2.0 - AI-Powered Emotional Wellness Companion</h3>
+          <p class="project-card-desc">Privacy-first AI for mood, conversation, and mindfulness support.</p>
+        </div>
+      </div>
+      <div class="tech-badges tech-badges--card">
+        <span>React + TypeScript</span>
+        <span>Tailwind CSS</span>
+        <span>Gemini API</span>
+        <span>IndexedDB</span>
+        <span>Framer Motion</span>
+        <span>Recharts</span>
+      </div>
+    </div>
+    <div class="project-actions project-actions--push">
+      <a href="https://lnkd.in/evsfsCA3" class="btn wellness-btn" target="_blank" rel="noopener noreferrer">Live Demo</a>
+      <button type="button" class="btn btn-outline project-details-link" data-modal-open="lumaModal">View Details</button>
+    </div>
+  </div>
+
+  <div class="projects-grid">
+  <div class="card reveal project-showcase-card project-card-minimal project-scroll-target" id="project-interview-prep-rag">
+    <div class="project-card-body">
+      <div class="project-header project-header--minimal">
+        <img class="project-icon project-icon--rag-preview" src="images/rag/rag-interview-prep.png" width="800" height="450" alt="Interview prep RAG workspace with document viewer and grounded chat responses" loading="lazy" decoding="async" />
+        <div>
+          <h3>Deep Learning RAG Interview Prep Agent</h3>
+          <p class="project-card-desc">RAG-powered interview prep with grounded Q&amp;A from your study materials.</p>
+        </div>
+      </div>
+      <div class="tech-badges tech-badges--card">
+        <span>Python</span>
+        <span>LangChain</span>
+        <span>LangGraph</span>
+        <span>ChromaDB</span>
+        <span>Streamlit</span>
+        <span>Groq API</span>
+      </div>
+    </div>
+    <div class="project-actions project-actions--push">
+      <a href="https://63sx4p6d3wpdtrufsceoqe.streamlit.app/" class="btn wellness-btn" target="_blank" rel="noopener noreferrer">Live Demo</a>
+      <button type="button" class="btn btn-outline project-details-link" data-modal-open="ragModal">View Details</button>
+    </div>
+  </div>
+
+  <div class="card reveal project-showcase-card project-job-matcher-card project-card-minimal project-scroll-target" id="smart-job-matcher-card">
+    <span class="project-card-corner-badge project-card-corner-badge--ai-ml">AI Automation</span>
+    <div class="project-card-body">
+      <div class="project-header project-header--minimal">
+        <img class="project-icon project-icon--job-matcher-preview" src="images/job-matcher-preview.png" width="800" height="593" alt="Internal hiring AI landing page preview with talent matching system metrics" loading="lazy" decoding="async" />
+        <div>
+          <h3>Smart Internal Job Matcher &amp; Email Notifier with AI</h3>
+          <p class="project-card-desc">Semantic matching to roles with SBERT embeddings and automated email workflows.</p>
+        </div>
+      </div>
+      <div class="tech-badges tech-badges--card">
+        <span>Python</span>
+        <span>FastAPI</span>
+        <span>PostgreSQL</span>
+        <span>SBERT</span>
+        <span>React</span>
+      </div>
+    </div>
+    <div class="project-actions project-actions--push">
+      <a href="https://youtu.be/eYLiPMcn-Xo?si=tWK_JbM2It689Cyo" class="btn wellness-btn" target="_blank" rel="noopener noreferrer">Live Demo</a>
+      <button type="button" class="btn btn-outline project-details-link" data-modal-open="jobMatcherModal">View Details</button>
+    </div>
+  </div>
+
+  <div class="card reveal project-showcase-card project-ai-analyst-card project-card-minimal project-scroll-target" id="project-ai-data-analyst">
+    <span class="project-card-corner-badge project-card-corner-badge--ai-ml">AI + ML</span>
+    <div class="project-card-body">
+      <div class="project-header project-header--minimal">
+        <img class="project-icon project-icon--ai-analyst-preview" src="images/ai-analyst-preview.jpg" width="1200" height="675" alt="DataPilot analytics workspace: dashboard, export results, and data overview" loading="lazy" decoding="async" />
+        <div>
+          <h3>AI Data Analyst Agent</h3>
+          <p class="project-card-desc">Automates analysis, charts, and ML to surface insights from tabular data.</p>
+        </div>
+      </div>
+      <div class="tech-badges tech-badges--card tech-badges--ai-analyst-pills">
+        <span>React</span>
+        <span>FastAPI</span>
+        <span>Python</span>
+        <span>Scikit-learn</span>
+        <span>Plotly</span>
+        <span>LLMs</span>
+      </div>
+    </div>
+    <div class="project-actions project-actions--push project-actions--ai-analyst">
+      <a href="#" class="btn wellness-btn">Live Demo</a>
+      <button type="button" class="btn btn-outline project-details-link" data-modal-open="aiAnalystModal">View Details</button>
+    </div>
+  </div>
+
+  <div class="card reveal project-standard-card project-card-minimal project-scroll-target" id="project-dishgenie">
+    <div class="project-card-body">
+      <div class="project-header project-header--minimal">
+        <img src="images/Dishgenie1.jpg" alt="Dishgenie Logo" class="project-icon">
+        <div>
+          <h3>DishGenie – AI Recipe Generator</h3>
+          <p class="project-card-desc">Personalized recipes from ingredients and preferences using OpenAI GPT.</p>
+        </div>
+      </div>
+      <div class="tech-badges tech-badges--card">
+        <span>Flask</span>
+        <span>JavaScript</span>
+        <span>OpenAI API</span>
+        <span>HTML/CSS</span>
+        <span>Render</span>
+      </div>
+    </div>
+    <div class="project-actions project-actions--push">
+      <a href="https://recipe-genie-zqak.onrender.com" class="btn wellness-btn" target="_blank" rel="noopener noreferrer">Live Demo</a>
+      <button type="button" class="btn btn-outline project-details-link" data-modal-open="dishgenieModal">View Details</button>
+    </div>
+  </div>
+
+  <div class="card reveal project-standard-card project-card-minimal project-scroll-target" id="project-crime-prediction">
+    <div class="project-card-body">
+      <div class="project-header project-header--minimal">
+        <div class="project-image-placeholder">Crime Analytics</div>
+        <div>
+          <h3>Crime Rate Prediction – GCP Project</h3>
+          <p class="project-card-desc">Cloud analytics pipeline for crime trend forecasting and visualization at scale.</p>
+        </div>
+      </div>
+      <div class="tech-badges tech-badges--card">
+        <span>BigQuery</span>
+        <span>PySpark</span>
+        <span>Hive</span>
+        <span>Dataproc</span>
+        <span>Python</span>
+      </div>
+    </div>
+    <div class="project-actions project-actions--push">
+      <button type="button" class="btn wellness-btn btn-demo-disabled" disabled title="No public deployment">Live Demo</button>
+      <button type="button" class="btn btn-outline project-details-link" data-modal-open="crimeModal">View Details</button>
+    </div>
+  </div>
+
+  <div class="card reveal project-standard-card project-card-minimal project-scroll-target" id="project-emotion-music">
+    <div class="project-card-body">
+      <div class="project-header project-header--minimal">
+        <div class="project-image-placeholder">Emotion + Music</div>
+        <div>
+          <h3>Emotion-Based Music Recommendation System</h3>
+          <p class="project-card-desc">Detects mood from faces and recommends music in real time via Spotify.</p>
+        </div>
+      </div>
+      <div class="tech-badges tech-badges--card">
+        <span>Python</span>
+        <span>CNN</span>
+        <span>OpenCV</span>
+        <span>Spotify API</span>
+      </div>
+    </div>
+    <div class="project-actions project-actions--push">
+      <button type="button" class="btn wellness-btn btn-demo-disabled" disabled title="No public deployment">Live Demo</button>
+      <button type="button" class="btn btn-outline project-details-link" data-modal-open="emotionModal">View Details</button>
+    </div>
+  </div>
+
+  <div class="card reveal project-standard-card project-card-minimal project-scroll-target" id="project-energy-forecasting">
+    <div class="project-card-body">
+      <div class="project-header project-header--minimal">
+        <div class="project-image-placeholder">Energy Forecasting</div>
+        <div>
+          <h3>Energy Consumption Forecasting</h3>
+          <p class="project-card-desc">Time-series models to forecast household electricity usage with clarity.</p>
+        </div>
+      </div>
+      <div class="tech-badges tech-badges--card">
+        <span>Python</span>
+        <span>ARIMA</span>
+        <span>LSTM</span>
+        <span>Matplotlib</span>
+        <span>Seaborn</span>
+      </div>
+    </div>
+    <div class="project-actions project-actions--push">
+      <button type="button" class="btn wellness-btn btn-demo-disabled" disabled title="No public deployment">Live Demo</button>
+      <button type="button" class="btn btn-outline project-details-link" data-modal-open="energyModal">View Details</button>
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+<div class="modal-overlay js-modal-overlay" id="lumaModal" aria-hidden="true">
+  <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="lumaModalTitle">
+    <button class="modal-close" type="button" aria-label="Close details">x</button>
+    <h3 id="lumaModalTitle">LUMA 2.0 - AI-Powered Emotional Wellness Companion</h3>
+    <p>
+      LUMA 2.0 is built to create a safe, calming digital space for emotional wellbeing. It combines emotional intelligence, conversational AI, and mindful interventions while keeping all sensitive data local-first and private.
+    </p>
+
+    <div class="modal-section">
+      <h4>Core Features</h4>
       <ul>
-        <li>Built pipelines with GCP: BigQuery, Hive, and PySpark on Dataproc.</li>
-        <li>Cleaned large datasets using OpenRefine and Python.</li>
-        <li>Enabled real-time data analysis via Spark Structured Streaming.</li>
-        <li>Created crime trend dashboards using heatmaps and time-series plots.</li>
+        <li>AI emotional chatbot with tone-aware Gemini responses</li>
+        <li>MoodCanvas that turns emotions into abstract AI art</li>
+        <li>BreatheSync exercises personalized to stress levels</li>
+        <li>Mood analytics dashboard with wellbeing insights</li>
+        <li>Daily check-ins with guided emotional exercises</li>
+        <li>Voice interaction powered by Web Speech API</li>
       </ul>
     </div>
 
-    <div class="experience-card">
-      <h4>AI Developer – DishGenie Recipe App</h4>
-      <p class="org">Group Project <span>| 2025</span></p>
+    <div class="modal-section">
+      <h4>Tech Stack</h4>
+      <div class="tech-badges">
+        <span>React + TypeScript</span>
+        <span>Tailwind CSS + Framer Motion</span>
+        <span>Google Gemini API</span>
+        <span>IndexedDB (local-first)</span>
+        <span>Recharts</span>
+        <span>Web Speech API</span>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <h4>Problem &amp; Solution</h4>
+      <p>
+        Many wellness apps feel generic and fail to provide emotionally adaptive support while also risking user privacy.
+        LUMA 2.0 solves this by combining real-time emotion-aware AI guidance with local-first architecture, helping users reflect safely without external data storage.
+      </p>
+    </div>
+
+    <div class="modal-section">
+      <h4>What I Learned</h4>
       <ul>
-        <li>Built a full-stack recipe generator using Flask, HTML/CSS, and GPT API.</li>
-        <li>Enabled user input control for cuisine, ingredients, and difficulty.</li>
-        <li>Integrated OpenAI API and deployed responsive UI via Render.</li>
-        <li>Managed UI feedback, error handling, and API performance logging.</li>
+        <li>Designing emotionally sensitive AI interactions with thoughtful response tone.</li>
+        <li>Balancing calm UI/UX with rich analytics and personalized workflows.</li>
+        <li>Building privacy-first systems using IndexedDB and local processing patterns.</li>
       </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Product preview</h4>
+      <div class="screenshot-grid screenshot-grid--luma">
+        <figure class="screenshot-thumb">
+          <img src="images/luma/luma-home.png" width="640" height="400" alt="LUMA home dashboard" loading="lazy" decoding="async" />
+          <figcaption>Home</figcaption>
+        </figure>
+        <figure class="screenshot-thumb">
+          <img src="images/luma/luma-chat.png" width="640" height="400" alt="LUMA chat interface with emotional compass sidebar" loading="lazy" decoding="async" />
+          <figcaption>Chat</figcaption>
+        </figure>
+        <figure class="screenshot-thumb">
+          <img src="images/luma/luma-moodcanvas.png" width="640" height="400" alt="MoodCanvas mood-to-art reflection flow" loading="lazy" decoding="async" />
+          <figcaption>MoodCanvas</figcaption>
+        </figure>
+        <figure class="screenshot-thumb">
+          <img src="images/luma/luma-analytics.png" width="640" height="400" alt="Analytics dashboard with mood trends and wellbeing score" loading="lazy" decoding="async" />
+          <figcaption>Analytics</figcaption>
+        </figure>
+        <figure class="screenshot-thumb">
+          <img src="images/luma/luma-breathesync.png" width="640" height="400" alt="BreatheSync breathing exercise session" loading="lazy" decoding="async" />
+          <figcaption>BreatheSync</figcaption>
+        </figure>
+        <figure class="screenshot-thumb">
+          <img src="images/luma/luma-exercise.png" width="640" height="400" alt="Guided Focus Builder exercise session" loading="lazy" decoding="async" />
+          <figcaption>Guided exercise</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </div>
 
+<div class="modal-overlay js-modal-overlay" id="ragModal" aria-hidden="true">
+  <div class="project-modal project-modal--rag" role="dialog" aria-modal="true" aria-labelledby="ragModalTitle">
+    <button class="modal-close" type="button" aria-label="Close details">x</button>
+    <h3 id="ragModalTitle">Deep Learning RAG Interview Prep Agent</h3>
+    <p>
+      A Retrieval-Augmented Generation (RAG) system for deep learning interview preparation. Users upload or reference study materials; the app retrieves relevant context, generates interview-style questions, evaluates responses, and explains answers with citations back to the source content.
+    </p>
 
-  <div class="tab-content" id="projects">
-  <h2>Projects</h2>
+    <div class="modal-section">
+      <h4>What it does</h4>
+      <ul>
+        <li>Ingests study materials and builds a searchable knowledge base</li>
+        <li>Generates contextual interview questions from retrieved chunks</li>
+        <li>Evaluates answers and surfaces grounded feedback</li>
+        <li>Provides source-grounded explanations tied to your documents</li>
+      </ul>
+    </div>
 
-  <div class="card">
-    <div class="project-header">
-      <img src="Dishgenie1.jpg" alt="Dishgenie Logo" class="project-icon">
-      <h3>DishGenie – AI Recipe Generator</h3>
-   </div>
-   <p>
-    A Flask-based web app that generates creative recipes using OpenAI’s GPT model. Users can input ingredients and cuisine preferences to receive personalized recipe ideas.
+    <div class="modal-section">
+      <h4>Pipeline &amp; stack</h4>
+      <p>
+        End-to-end RAG with <strong>LangChain</strong> and <strong>LangGraph</strong> for orchestration, <strong>ChromaDB</strong> for vector storage, structured chunking and retrieval, and evaluation loops. The UI is built with <strong>Streamlit</strong>; the LLM runs via <strong>Groq API</strong> with embedding models for semantic search.
+      </p>
+      <div class="tech-badges">
+        <span>Python</span>
+        <span>LangChain</span>
+        <span>LangGraph</span>
+        <span>ChromaDB</span>
+        <span>Streamlit</span>
+        <span>Groq API</span>
+        <span>Embeddings</span>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <h4>Preview</h4>
+      <figure class="screenshot-thumb screenshot-thumb--single">
+        <img src="images/rag/rag-interview-prep.png" width="800" height="450" alt="Interview prep RAG interface with corpus ingestion, source viewer, and grounded Q&A" loading="lazy" decoding="async" />
+        <figcaption>Interview Prep workspace</figcaption>
+      </figure>
+    </div>
+
+    <div class="modal-section">
+      <h4>Try it</h4>
+      <p>
+        <a href="https://63sx4p6d3wpdtrufsceoqe.streamlit.app/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open Streamlit demo</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay js-modal-overlay" id="jobMatcherModal" aria-hidden="true">
+  <div class="project-modal project-modal--job-matcher" role="dialog" aria-modal="true" aria-labelledby="jobMatcherModalTitle">
+    <button class="modal-close" type="button" aria-label="Close details">x</button>
+    <h3 id="jobMatcherModalTitle">Smart Internal Job Matcher &amp; Email Notifier with AI</h3>
+    <p>
+      An AI-powered system that matches employees or applicants to internal roles using <strong>Sentence-BERT</strong> embeddings, then triggers personalized email notifications. It is designed to cut manual screening time while keeping matches explainable and auditable.
+    </p>
+
+    <div class="modal-section">
+      <h4>Highlights</h4>
+      <ul>
+        <li>Semantic candidate–job matching with SBERT vector similarity</li>
+        <li>Automated, personalized email workflows for shortlisted matches</li>
+        <li>Duplicate detection and prevention across applications and roles</li>
+        <li>Dual-database querying for flexible HR and application data access</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Architecture</h4>
+      <p>
+        <strong>FastAPI</strong> serves the REST API; <strong>PostgreSQL</strong> backs persistent data; the front end is built with <strong>React</strong> and <strong>TypeScript</strong>. Embedding and matching logic uses <strong>Sentence Transformers</strong>, with clear separation between matching rules, notification jobs, and the UI.
+      </p>
+      <div class="tech-badges">
+        <span>Python</span>
+        <span>FastAPI</span>
+        <span>PostgreSQL</span>
+        <span>Sentence Transformers (SBERT)</span>
+        <span>React</span>
+        <span>TypeScript</span>
+        <span>REST API</span>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <h4>Showcase video</h4>
+      <p class="modal-section-lead">Project walkthrough on YouTube (opens in a new tab).</p>
+      <p>
+        <a href="https://youtu.be/eYLiPMcn-Xo?si=tWK_JbM2It689Cyo" class="btn wellness-btn" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay js-modal-overlay" id="aiAnalystModal" aria-hidden="true">
+  <div class="project-modal project-modal--ai-analyst" role="dialog" aria-modal="true" aria-labelledby="aiAnalystModalTitle">
+    <button class="modal-close" type="button" aria-label="Close details">x</button>
+    <h3 id="aiAnalystModalTitle">AI Data Analyst Agent</h3>
+    <p>
+      An AI-powered system that automates data analysis, visualization, and machine learning to generate actionable insights from raw datasets—from ingestion through charts, models, and natural-language summaries.
+    </p>
+    <div class="modal-section">
+      <h4>Highlights</h4>
+      <ul>
+        <li>Fully automated end-to-end pipeline: clean, explore, model, and visualize</li>
+        <li>Interactive Plotly visuals and structured ML workflows (Scikit-learn)</li>
+        <li>LLM layer turns results into readable, actionable insight narratives</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h4>Tech stack</h4>
+      <div class="tech-badges">
+        <span>React</span>
+        <span>FastAPI</span>
+        <span>Python</span>
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>Scikit-learn</span>
+        <span>Plotly</span>
+        <span>LLMs</span>
+      </div>
+    </div>
+    <div class="modal-section">
+      <h4>Preview</h4>
+      <figure class="screenshot-thumb screenshot-thumb--single">
+        <img src="images/ai-analyst-preview.jpg" width="1200" height="675" alt="DataPilot premium analytics workspace with export results, metrics, and schema overview" loading="lazy" decoding="async" />
+        <figcaption>DataPilot — analytics workspace</figcaption>
+      </figure>
+    </div>
+    <div class="modal-section">
+      <h4>Demo</h4>
+      <p class="modal-section-lead">Live demo link coming soon — use Live Demo on the card when available.</p>
+      <p>
+        <a href="#" class="btn wellness-btn">Live Demo</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay js-modal-overlay" id="dishgenieModal" aria-hidden="true">
+  <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="dishgenieModalTitle">
+    <button class="modal-close" type="button" aria-label="Close details">x</button>
+    <h3 id="dishgenieModalTitle">DishGenie – AI Recipe Generator</h3>
+    <p>
+      A Flask-based app that generates personalized recipes using OpenAI GPT from ingredients, cuisine preferences, and cooking style.
+    </p>
+    <div class="modal-section">
+      <h4>What I built</h4>
+      <ul>
+        <li>End-to-end recipe generation workflow with interactive user input.</li>
+        <li>GPT integration with prompt tuning for stronger dish personalization.</li>
+        <li>Responsive UI for real-time recipe generation and feedback.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h4>Try it</h4>
+      <p>
+        <a href="https://recipe-genie-zqak.onrender.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open live demo</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay js-modal-overlay" id="crimeModal" aria-hidden="true">
+  <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="crimeModalTitle">
+    <button class="modal-close" type="button" aria-label="Close details">x</button>
+    <h3 id="crimeModalTitle">Crime Rate Prediction – GCP Project</h3>
+    <p>
+      A cloud-native analytics pipeline for processing, forecasting, and visualizing crime trends at scale on Google Cloud Platform.
+    </p>
+    <div class="modal-section">
+      <h4>Details</h4>
+      <ul>
+        <li>Robust ETL for structured and semi-structured crime datasets.</li>
+        <li>Spark Structured Streaming for near real-time trend exploration.</li>
+        <li>Dashboards with time series and heatmap-style visualizations.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h4>Stack</h4>
+      <div class="tech-badges">
+        <span>BigQuery</span>
+        <span>PySpark</span>
+        <span>Hive</span>
+        <span>Dataproc</span>
+        <span>OpenRefine</span>
+        <span>Python</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay js-modal-overlay" id="emotionModal" aria-hidden="true">
+  <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="emotionModalTitle">
+    <button class="modal-close" type="button" aria-label="Close details">x</button>
+    <h3 id="emotionModalTitle">Emotion-Based Music Recommendation System</h3>
+    <p>
+      Detects emotions from facial expressions and recommends music that matches the user's mood in real time.
+    </p>
+    <div class="modal-section">
+      <h4>Details</h4>
+      <ul>
+        <li>CNN-based emotion classification from webcam facial frames.</li>
+        <li>Emotion labels mapped to curated Spotify playlist recommendations.</li>
+        <li>Smoother flow between detection, inference, and playback suggestions.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h4>Stack</h4>
+      <div class="tech-badges">
+        <span>Python</span>
+        <span>CNN</span>
+        <span>OpenCV</span>
+        <span>Spotify API</span>
+        <span>ML</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay js-modal-overlay" id="energyModal" aria-hidden="true">
+  <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="energyModalTitle">
+    <button class="modal-close" type="button" aria-label="Close details">x</button>
+    <h3 id="energyModalTitle">Energy Consumption Forecasting</h3>
+    <p>
+      Predictive analytics for household electricity usage using statistical and deep learning time-series models.
+    </p>
+    <div class="modal-section">
+      <h4>Details</h4>
+      <ul>
+        <li>Forecasting models trained on historical power consumption data.</li>
+        <li>Compared statistical (ARIMA) and deep learning (LSTM) approaches.</li>
+        <li>Reduced error via feature engineering and hyperparameter tuning.</li>
+      </ul>
+    </div>
+    <div class="modal-section">
+      <h4>Stack</h4>
+      <div class="tech-badges">
+        <span>Python</span>
+        <span>ARIMA</span>
+        <span>LSTM</span>
+        <span>Matplotlib</span>
+        <span>Seaborn</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay js-modal-overlay" id="oracleCertModal" aria-hidden="true">
+  <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="oracleCertModalTitle">
+    <button class="modal-close" type="button" aria-label="Close details">x</button>
+    <h3 id="oracleCertModalTitle">Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</h3>
+    <p>Certificate of Recognition issued by Oracle University.</p>
+    <div class="modal-section">
+      <figure class="screenshot-thumb screenshot-thumb--single">
+        <img src="images/oracle-certificate.png" width="800" height="563" alt="Oracle Certified Professional certificate for Kusuma Chalasani with valid till date October 30, 2027" loading="lazy" decoding="async" />
+      </figure>
+    </div>
+  </div>
+</div>
+
+<section class="section-block section-block--compact section-reveal" id="certificates" aria-labelledby="certificates-heading">
+  <div class="section-inner">
+  <h2 id="certificates-heading"><span class="section-label">06</span> Certifications</h2>
+  <p class="cert-section-intro">
+    Industry-recognized credentials across AI systems, cloud platforms, and production-ready agent development.
   </p>
-  <ul>
-    <li>Developed a full-stack web application with Flask, HTML, and CSS.</li>
-    <li>Integrated OpenAI’s GPT API to generate recipe content based on user input.</li>
-    <li>Designed a user-friendly interface for real-time interaction and feedback.</li>
-    <li>Deployed the app using Render for public access.</li>
-  </ul>
-  <a href="https://recipe-genie-zqak.onrender.com" class="btn" target="_blank">Visit Project</a>
-</div>
 
-
-  <div class="card">
-    <h3>Crime Rate Prediction – GCP Project</h3>
-    <p>
-      A cloud-native pipeline built to analyze and visualize crime trends using scalable tools on Google Cloud Platform.
-    </p>
-    <ul>
-      <li>Used BigQuery for SQL-based analysis and data warehousing.</li>
-      <li>Performed ETL and transformations with Hive and PySpark on Dataproc.</li>
-      <li>Cleaned raw datasets using Python and OpenRefine.</li>
-      <li>Implemented Spark Structured Streaming for live data handling and dashboard creation.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Emotion-Based Music Recommendation System</h3>
-    <p>
-      A smart system that detects a user’s emotion using facial expressions and recommends music based on their mood.
-    </p>
-    <ul>
-      <li>Used CNN to classify emotions from facial images captured via webcam.</li>
-      <li>Mapped detected emotions to relevant music playlists using Spotify’s API.</li>
-      <li>Built a Python-based interface for real-time emotion recognition and response.</li>
-      <li>Improved UX with seamless transitions between mood detection and music output.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Energy Consumption Forecasting</h3>
-    <p>
-      A predictive analytics project focused on forecasting household electricity usage using time-series models.
-    </p>
-    <ul>
-      <li>Utilized historical consumption datasets for training models in Python.</li>
-      <li>Applied statistical and machine learning techniques like ARIMA and LSTM.</li>
-      <li>Visualized trends using Matplotlib and Seaborn.</li>
-      <li>Reduced prediction error by 20% through hyperparameter tuning and normalization.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="tab-content" id="certificates">
-  <h2>Certificates</h2>
-  <ul>
-    <li>
-      <strong>Microsoft Certified: Azure Fundamentals (AZ-900)</strong> – Earned in February 2023.
-      <p>
-        Gained foundational understanding of Azure services, core cloud concepts, pricing models,
-        governance, and compliance in cloud environments.
-      </p>
-      <a href="https://learn.microsoft.com/api/credentials/share/en-us/ChKusumaSatyaSreeja-7423/787ADADBC0410834?sharingId" class="btn" target="_blank">View Certificate</a>
+  <ul class="cert-list">
+    <li class="cert-card cert-card--featured">
+      <div class="cert-card-icon">
+        <img src="images/certs/anthropic.png" width="48" height="48" alt="Anthropic" loading="lazy" decoding="async" />
+      </div>
+      <div class="cert-card-main">
+        <div class="cert-card-head">
+          <h3>Introduction to Model Context Protocol</h3>
+          <span class="cert-badge">Latest</span>
+        </div>
+        <dl class="cert-meta">
+          <div>
+            <dt>Issuer</dt>
+            <dd>Anthropic</dd>
+          </div>
+          <div>
+            <dt>Date</dt>
+            <dd>March 2026</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="cert-card-actions">
+        <a href="https://verify.skilljar.com/c/4pigxgw55c9y" class="btn btn-primary cert-action-btn" target="_blank" rel="noopener noreferrer">View Credential</a>
+      </div>
     </li>
-    <br>
-    <li>
-      <strong>AI For Everyone – DeepLearning.AI</strong> – Completed in June 2021.
-      <p>
-        Learned AI strategy, key use cases, limitations of AI, workflow basics, and how to navigate
-        AI adoption in business environments responsibly.
-      </p>
-      <a href="https://www.coursera.org/account/accomplishments/verify/33T6HK5DB9MK" class="btn" target="_blank">View Certificate</a>
+
+    <li class="cert-card cert-card--featured">
+      <div class="cert-card-icon">
+        <img src="images/certs/anthropic.png" width="48" height="48" alt="Anthropic" loading="lazy" decoding="async" />
+      </div>
+      <div class="cert-card-main">
+        <div class="cert-card-head">
+          <h3>AI Fluency: Framework &amp; Foundations</h3>
+          <span class="cert-badge">Latest</span>
+        </div>
+        <dl class="cert-meta">
+          <div>
+            <dt>Issuer</dt>
+            <dd>Anthropic</dd>
+          </div>
+          <div>
+            <dt>Date</dt>
+            <dd>March 2026</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="cert-card-actions">
+        <a href="https://verify.skilljar.com/c/ce9afgf9zo99" class="btn btn-primary cert-action-btn" target="_blank" rel="noopener noreferrer">View Credential</a>
+      </div>
+    </li>
+
+    <li class="cert-card">
+      <div class="cert-card-icon">
+        <img src="images/certs/oracle.png" width="48" height="48" alt="Oracle" loading="lazy" decoding="async" />
+      </div>
+      <div class="cert-card-main">
+        <div class="cert-card-head">
+          <h3>Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</h3>
+        </div>
+        <dl class="cert-meta cert-meta--triple">
+          <div>
+            <dt>Issuer</dt>
+            <dd>Oracle</dd>
+          </div>
+          <div>
+            <dt>Date</dt>
+            <dd>October 2025</dd>
+          </div>
+          <div>
+            <dt>Valid Till</dt>
+            <dd>October 2027</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="cert-card-actions cert-card-actions--split">
+        <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=A35CABAA16FDC2853F6F32907B64107A6AE5B84B775E4E1366D41842378D38A5" class="btn btn-primary cert-action-btn" target="_blank" rel="noopener noreferrer">View Credential</a>
+        <button type="button" class="btn btn-primary cert-action-btn project-details-link" data-modal-open="oracleCertModal">View Certificate</button>
+      </div>
+    </li>
+
+    <li class="cert-card">
+      <div class="cert-card-icon">
+        <img src="images/certs/deeplearning-ai.png" width="48" height="48" alt="DeepLearning.AI" loading="lazy" decoding="async" />
+      </div>
+      <div class="cert-card-main">
+        <div class="cert-card-head">
+          <h3>Building AI Voice Agents for Production</h3>
+        </div>
+        <dl class="cert-meta">
+          <div>
+            <dt>Issuer</dt>
+            <dd>DeepLearning.AI</dd>
+          </div>
+          <div>
+            <dt>Date</dt>
+            <dd>July 2025</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="cert-card-actions">
+        <a href="https://learn.deeplearning.ai/accomplishments/6db18c38-91dc-4e88-9636-25280b9b26a8" class="btn btn-primary cert-action-btn" target="_blank" rel="noopener noreferrer">View Credential</a>
+      </div>
+    </li>
+
+    <li class="cert-card">
+      <div class="cert-card-icon">
+        <img src="images/certs/microsoft-azure.png" width="48" height="48" alt="Microsoft Certified Fundamentals" loading="lazy" decoding="async" />
+      </div>
+      <div class="cert-card-main">
+        <div class="cert-card-head">
+          <h3>Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+        </div>
+        <dl class="cert-meta">
+          <div>
+            <dt>Issuer</dt>
+            <dd>Microsoft</dd>
+          </div>
+          <div>
+            <dt>Date</dt>
+            <dd>February 2023</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="cert-card-actions">
+        <a href="https://learn.microsoft.com/api/credentials/share/en-us/ChKusumaSatyaSreeja-7423/787ADADBC0410834?sharingId" class="btn btn-primary cert-action-btn" target="_blank" rel="noopener noreferrer">View Credential</a>
+      </div>
+    </li>
+
+    <li class="cert-card">
+      <div class="cert-card-icon">
+        <img src="images/certs/deeplearning-ai.png" width="48" height="48" alt="DeepLearning.AI" loading="lazy" decoding="async" />
+      </div>
+      <div class="cert-card-main">
+        <div class="cert-card-head">
+          <h3>AI For Everyone</h3>
+        </div>
+        <dl class="cert-meta">
+          <div>
+            <dt>Issuer</dt>
+            <dd>DeepLearning.AI (Coursera)</dd>
+          </div>
+          <div>
+            <dt>Date</dt>
+            <dd>June 2021</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="cert-card-actions">
+        <a href="https://www.coursera.org/account/accomplishments/verify/33T6HK5DB9MK" class="btn btn-primary cert-action-btn" target="_blank" rel="noopener noreferrer">View Credential</a>
+      </div>
     </li>
   </ul>
-</div>
+  </div>
+</section>
 
 
-<div class="tab-content" id="art">
-  <h2>My Creative Space</h2>
-  <p>Outside of my professional work in data science and cloud engineering, I pursue pencil sketching and digital illustration as a personal hobby.</p>
+<section class="section-block section-block--compact section-reveal" id="art" aria-labelledby="art-heading">
+  <div class="section-inner">
+  <h2 id="art-heading"><span class="section-label">07</span> My Creative Space</h2>
+  <p>Outside of my professional work in data science, cloud engineering, and AI, I explore creativity through pencil sketching and digital illustration.</p>
   <p>This gallery features a few of my favorite works — blending emotion, culture, and character through art.</p>
 
   <div class="art-gallery">
-    <img src="art3.jpg" alt="Pencil Sketch of Actor" class="art-image">
-    <img src="art2.png" alt="Lion King Fanart" class="art-image">
-    <img src="art1.png" alt="Little Krishna" class="art-image">
+    <img src="images/art/art3.jpg" alt="Pencil Sketch of Actor" class="art-image">
+    <img src="images/art/art2.png" alt="Lion King Fanart" class="art-image">
+    <img src="images/art/art1.png" alt="Little Krishna" class="art-image">
   </div>
 
   <p>Explore more of my work on Instagram:</p>
-  <a href="https://www.instagram.com/pencilart_love" class="btn" target="_blank">@pencilart_love</a>
-</div>
+  <a href="https://www.instagram.com/pencilart_love" class="btn btn-outline" target="_blank" rel="noopener noreferrer">@pencilart_love</a>
+  </div>
+</section>
 
 
-<div class="tab-content" id="contact">
-  <h2>Get in Touch</h2>
-  <p>✨ Whether you're looking to collaborate on a project, chat about AI and data, or just say hi — I'm all ears!</p>
-  
-  <a href="mailto:kusumasatyasreeja@gmail.com" class="btn email-btn">📩Email Me</a>
-</div>
+<section class="section-block section-block--compact section-block--contact section-reveal" id="contact" aria-labelledby="contact-heading">
+  <div class="section-inner">
+  <h2 id="contact-heading"><span class="section-label">08</span> Get in Touch</h2>
+  <p class="contact-lead">Actively seeking Data Engineering, AI, and Cloud opportunities. Let’s build scalable, real-world systems together.</p>
+  <div class="contact-meta">
+    <p class="contact-meta-line">🟢 Available for Internships &amp; Full-Time Roles</p>
+    <p class="contact-meta-line">📍 Texas, USA · Open to Remote &amp; Relocation</p>
+  </div>
+  <div class="contact-actions" role="group" aria-label="Contact and social links">
+    <a href="mailto:kusumasatyasreeja@gmail.com" class="btn btn-primary">Email Me</a>
+    <a href="https://www.linkedin.com/in/kusuma-chalasani" class="btn btn-primary" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/Kusuma19072001" class="btn btn-primary" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+  <p class="contact-response-note">Usually responds within 24 hours</p>
+  </div>
+</section>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; Kusuma Satya Sreeja Chalasani</p>
   </footer>
 
+<script>
+  const modalOverlays = document.querySelectorAll(".js-modal-overlay");
+
+  const syncBodyScroll = () => {
+    const anyOpen = [...modalOverlays].some((el) => el.classList.contains("is-open"));
+    document.body.style.overflow = anyOpen ? "hidden" : "";
+  };
+
+  const openProjectModal = (overlay) => {
+    overlay.classList.add("is-open");
+    overlay.setAttribute("aria-hidden", "false");
+    syncBodyScroll();
+  };
+
+  const closeProjectModal = (overlay) => {
+    overlay.classList.remove("is-open");
+    overlay.setAttribute("aria-hidden", "true");
+    syncBodyScroll();
+  };
+
+  document.querySelectorAll("[data-modal-open]").forEach((btn) => {
+    const id = btn.getAttribute("data-modal-open");
+    const overlay = document.getElementById(id);
+    if (!overlay) return;
+    btn.addEventListener("click", () => openProjectModal(overlay));
+  });
+
+  modalOverlays.forEach((overlay) => {
+    const closeBtn = overlay.querySelector(".modal-close");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => closeProjectModal(overlay));
+    }
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) closeProjectModal(overlay);
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    modalOverlays.forEach((overlay) => {
+      if (overlay.classList.contains("is-open")) closeProjectModal(overlay);
+    });
+  });
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+  document.querySelectorAll(".section-reveal").forEach((el) => revealObserver.observe(el));
+
+  (function initThemeToggle() {
+    const root = document.documentElement;
+    const storageKey = "kusuma-theme";
+    const buttons = document.querySelectorAll(".theme-toggle__btn[data-theme-value]");
+
+    function applyTheme(theme) {
+      if (theme !== "light" && theme !== "dark") return;
+      root.setAttribute("data-theme", theme);
+      try {
+        localStorage.setItem(storageKey, theme);
+      } catch (_) {}
+      buttons.forEach((btn) => {
+        const active = btn.getAttribute("data-theme-value") === theme;
+        btn.classList.toggle("is-active", active);
+        btn.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+    }
+
+    applyTheme(root.getAttribute("data-theme") || "dark");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => applyTheme(btn.getAttribute("data-theme-value")));
+    });
+  })();
+</script>
 
 </body>
 </html>
