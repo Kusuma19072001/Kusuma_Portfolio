@@ -1374,6 +1374,14 @@ button.project-details-link {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
+.screenshot-grid--datapilot {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.screenshot-grid--dishgenie {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
 .screenshot-thumb {
   margin: 0;
   border-radius: var(--radius-sm);
