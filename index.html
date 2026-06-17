@@ -237,7 +237,7 @@
         <img src="images/cloud4c.png" alt="Cloud4C Logo" class="project-icon">
         <h4>Cloud Support Engineer - Data Engineering &amp; Operations</h4>
       </div>
-      <p class="org">Client: DHL <span>| Jun 2022 – Jul 2024</span></p>
+      <p class="org">Client:DHL <span>| Jun 2022 – Jul 2024</span></p>
       <ul>
         <li>Worked on enterprise cloud operations and data-driven systems for large-scale environments (DHL project), contributing across data engineering, analytics, and cloud infrastructure workflows.</li>
         <li>Designed and supported data pipelines for extracting, transforming, and analyzing cloud usage and performance data using Python and SQL.</li>
@@ -1393,11 +1393,25 @@
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0 }
   );
+
+  function revealFromHash() {
+    const id = location.hash.slice(1);
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    if (target.classList.contains("section-reveal") || target.classList.contains("reveal")) {
+      target.classList.add("visible");
+      revealObserver.unobserve(target);
+    }
+  }
 
   document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
   document.querySelectorAll(".section-reveal").forEach((el) => revealObserver.observe(el));
+
+  revealFromHash();
+  window.addEventListener("hashchange", revealFromHash);
 
   (function initThemeToggle() {
     const root = document.documentElement;
