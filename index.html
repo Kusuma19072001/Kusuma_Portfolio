@@ -1101,6 +1101,19 @@
   </div>
 </div>
 
+<div class="modal-overlay js-modal-overlay" id="awsCertModal" aria-hidden="true">
+  <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="awsCertModalTitle">
+    <button class="modal-close" type="button" aria-label="Close details">x</button>
+    <h3 id="awsCertModalTitle">AWS Certified Solutions Architect – Associate (SAA-C03)</h3>
+    <p>Digital badge issued by Amazon Web Services Training and Certification via Credly.</p>
+    <div class="modal-section">
+      <figure class="screenshot-thumb screenshot-thumb--single">
+        <img src="images/certificates/aws-solutions-architect-associate.png" width="400" height="400" alt="AWS Certified Solutions Architect Associate badge for Kusuma Satya Sreeja Chalasani, valid through June 2029" loading="lazy" decoding="async" />
+      </figure>
+    </div>
+  </div>
+</div>
+
 <div class="modal-overlay js-modal-overlay" id="oracleCertModal" aria-hidden="true">
   <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="oracleCertModalTitle">
     <button class="modal-close" type="button" aria-label="Close details">x</button>
@@ -1122,14 +1135,13 @@
   </p>
 
   <ul class="cert-list">
-    <li class="cert-card cert-card--featured">
+    <li class="cert-card cert-card--featured" data-earned-date="2026-06-01">
       <div class="cert-card-icon">
         <img src="images/certs/anthropic.png" width="48" height="48" alt="Anthropic" loading="lazy" decoding="async" />
       </div>
       <div class="cert-card-main">
         <div class="cert-card-head">
           <h3>Claude 101</h3>
-          <span class="cert-badge">Latest</span>
         </div>
         <dl class="cert-meta">
           <div>
@@ -1147,14 +1159,13 @@
       </div>
     </li>
 
-    <li class="cert-card cert-card--featured">
+    <li class="cert-card cert-card--featured" data-earned-date="2026-03-01">
       <div class="cert-card-icon">
         <img src="images/certs/anthropic.png" width="48" height="48" alt="Anthropic" loading="lazy" decoding="async" />
       </div>
       <div class="cert-card-main">
         <div class="cert-card-head">
           <h3>Introduction to Model Context Protocol</h3>
-          <span class="cert-badge">Latest</span>
         </div>
         <dl class="cert-meta">
           <div>
@@ -1172,14 +1183,13 @@
       </div>
     </li>
 
-    <li class="cert-card cert-card--featured">
+    <li class="cert-card cert-card--featured" data-earned-date="2026-03-01">
       <div class="cert-card-icon">
         <img src="images/certs/anthropic.png" width="48" height="48" alt="Anthropic" loading="lazy" decoding="async" />
       </div>
       <div class="cert-card-main">
         <div class="cert-card-head">
           <h3>AI Fluency: Framework &amp; Foundations</h3>
-          <span class="cert-badge">Latest</span>
         </div>
         <dl class="cert-meta">
           <div>
@@ -1197,7 +1207,36 @@
       </div>
     </li>
 
-    <li class="cert-card">
+    <li class="cert-card cert-card--featured" data-earned-date="2026-06-30">
+      <div class="cert-card-icon">
+        <img src="images/certs/aws.png" width="48" height="48" alt="AWS Certified Solutions Architect Associate" loading="lazy" decoding="async" />
+      </div>
+      <div class="cert-card-main">
+        <div class="cert-card-head">
+          <h3>AWS Certified Solutions Architect – Associate (SAA-C03)</h3>
+        </div>
+        <dl class="cert-meta cert-meta--triple">
+          <div>
+            <dt>Issuer</dt>
+            <dd>Amazon Web Services</dd>
+          </div>
+          <div>
+            <dt>Date</dt>
+            <dd>June 2026</dd>
+          </div>
+          <div>
+            <dt>Valid Till</dt>
+            <dd>June 2029</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="cert-card-actions cert-card-actions--split">
+        <a href="https://www.credly.com/badges/ab9bd659-4ce0-41ec-9323-51248e9ff8f3/public_url" class="btn btn-primary cert-action-btn" target="_blank" rel="noopener noreferrer">View Credential</a>
+        <button type="button" class="btn btn-primary cert-action-btn project-details-link" data-modal-open="awsCertModal">View Badge</button>
+      </div>
+    </li>
+
+    <li class="cert-card" data-earned-date="2025-10-01">
       <div class="cert-card-icon">
         <img src="images/certs/oracle.png" width="48" height="48" alt="Oracle" loading="lazy" decoding="async" />
       </div>
@@ -1226,7 +1265,7 @@
       </div>
     </li>
 
-    <li class="cert-card">
+    <li class="cert-card" data-earned-date="2025-07-01">
       <div class="cert-card-icon">
         <img src="images/certs/deeplearning-ai.png" width="48" height="48" alt="DeepLearning.AI" loading="lazy" decoding="async" />
       </div>
@@ -1250,7 +1289,7 @@
       </div>
     </li>
 
-    <li class="cert-card">
+    <li class="cert-card" data-earned-date="2023-02-01">
       <div class="cert-card-icon">
         <img src="images/certs/microsoft-azure.png" width="48" height="48" alt="Microsoft Certified Fundamentals" loading="lazy" decoding="async" />
       </div>
@@ -1274,7 +1313,7 @@
       </div>
     </li>
 
-    <li class="cert-card">
+    <li class="cert-card" data-earned-date="2021-06-01">
       <div class="cert-card-icon">
         <img src="images/certs/deeplearning-ai.png" width="48" height="48" alt="DeepLearning.AI" loading="lazy" decoding="async" />
       </div>
@@ -1413,6 +1452,44 @@
 
   revealFromHash();
   window.addEventListener("hashchange", revealFromHash);
+
+  (function sortCertificationsByDate() {
+    const list = document.querySelector(".cert-list");
+    if (!list) return;
+
+    const getEarnedTime = (card) => {
+      const isoDate = card.getAttribute("data-earned-date");
+      if (isoDate) {
+        const time = new Date(isoDate).getTime();
+        if (!Number.isNaN(time)) return time;
+      }
+
+      const dateLabel = [...card.querySelectorAll(".cert-meta dt")].find(
+        (dt) => dt.textContent.trim() === "Date"
+      );
+      if (!dateLabel) return 0;
+      const dateText = dateLabel.nextElementSibling?.textContent?.trim() ?? "";
+      const time = new Date(dateText).getTime();
+      return Number.isNaN(time) ? 0 : time;
+    };
+
+    const cards = [...list.querySelectorAll(":scope > .cert-card")].sort(
+      (a, b) => getEarnedTime(b) - getEarnedTime(a)
+    );
+
+    cards.forEach((card) => list.appendChild(card));
+
+    cards.forEach((card) => {
+      card.querySelector(".cert-badge")?.remove();
+    });
+    const newestHead = cards[0]?.querySelector(".cert-card-head");
+    if (newestHead) {
+      const badge = document.createElement("span");
+      badge.className = "cert-badge";
+      badge.textContent = "Latest";
+      newestHead.appendChild(badge);
+    }
+  })();
 
   (function initThemeToggle() {
     const root = document.documentElement;
